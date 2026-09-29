@@ -1,0 +1,17 @@
+{
+  "name": "maritime-quiz",
+  "version": "1.0.0",
+  "description": "航海船员证书刷题站 — 轮机/驾驶/无线电分类练习，离线刷题与进度同步",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
