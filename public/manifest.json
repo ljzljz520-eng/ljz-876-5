@@ -1,0 +1,15 @@
+{
+  "name": "航海船员证书刷题站",
+  "short_name": "船员刷题",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0b3d66",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='28' fill='%230b3d66'/%3E%3Ctext x='96' y='120' font-size='80' text-anchor='middle' fill='white'%3E%E2%9A%93%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

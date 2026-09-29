@@ -1,0 +1,14 @@
+{
+  "name": "maritime-crew-exam",
+  "version": "1.0.0",
+  "description": "航海船员证书刷题站 - 离线刷题与进度同步",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0"
+  }
+}

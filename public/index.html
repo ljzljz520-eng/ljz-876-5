@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b3d66">
+<title>航海船员证书刷题站</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⚓ 航海船员刷题</div>
+  <div class="sync-status" id="syncStatus" title="同步状态">
+    <span class="dot" id="netDot"></span><span id="netText">检测中…</span>
+    <span class="pending" id="pendingBadge" hidden>待同步 0</span>
+  </div>
+</header>
+
+<main class="container">
+  <!-- 首页 -->
+  <section id="screenHome" class="screen">
+    <div class="user-bar">
+      <label>船员编号：<input id="userInput" type="text" value="船员001" maxlength="12"></label>
+    </div>
+
+    <h2 class="section-title">选择类别</h2>
+    <div class="cat-grid" id="catGrid"></div>
+
+    <h2 class="section-title">题型正确率</h2>
+    <div class="type-stats" id="typeStats"></div>
+
+    <div class="home-actions">
+      <button class="btn primary" id="btnStartAll">开始综合练习</button>
+      <button class="btn" id="btnSync">🔄 立即同步</button>
+    </div>
+    <p class="tip" id="syncTip">离线时答题会保存在本机，恢复网络后自动同步进度。</p>
+  </section>
+
+  <!-- 答题页 -->
+  <section id="screenQuiz" class="screen" hidden>
+    <div class="quiz-head">
+      <button class="btn small" id="btnBack">← 返回</button>
+      <div class="quiz-meta">
+        <span id="qCat"></span> · <span id="qType"></span>
+        <span class="progress" id="qProgress"></span>
+      </div>
+    </div>
+
+    <div class="card" id="quizCard">
+      <div class="q-text" id="qText"></div>
+      <div class="q-media" id="qMedia"></div>
+      <div class="options" id="qOptions"></div>
+      <div class="q-actions">
+        <button class="btn primary" id="btnSubmit" disabled>确认答案</button>
+        <button class="btn" id="btnSpeak" hidden>🔊 播放听力</button>
+      </div>
+      <div class="result" id="qResult" hidden>
+        <div class="result-head" id="resultHead"></div>
+        <div class="explain"><b>解析：</b><span id="qExplain"></span></div>
+        <div class="version-tag">适用考试版本：<span id="qVersion"></span></div>
+        <button class="btn primary" id="btnNext">下一题 →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 统计页 -->
+  <section id="screenStats" class="screen" hidden>
+    <h2 class="section-title">我的统计</h2>
+    <div class="stats-overview" id="statsOverview"></div>
+    <div class="stats-detail" id="statsDetail"></div>
+    <button class="btn" id="btnStatsBack">← 返回首页</button>
+  </section>
+</main>
+
+<nav class="tabbar">
+  <button class="tab active" data-tab="home">🏠 练习</button>
+  <button class="tab" data-tab="stats">📊 统计</button>
+</nav>
+
+<script src="/js/db.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
